@@ -1,0 +1,138 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.Master.cs" Inherits="HaQuangVinh_ThiKetThucMon.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="CTHearder" runat="server"></asp:ContentPlaceHolder>
+</head>
+<style>
+    *{
+        margin: 0 auto;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .container{
+        max-width: 1200px;
+    }
+    .container-content{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .container-content-title{
+        padding: 10px 0 10px 0;
+        font-size: 25px;
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #808080;
+    }
+    .title-flex-left{
+        text-align: center;
+    }
+    .title-nho{
+        font-size: 15px;
+        margin-top: 10px;
+    }
+    .clear{
+        clear: both;
+    }
+    .container-content-content{
+        font-size: 18px;
+    }
+    .content-float-left{
+        border-left: 1px solid #808080;
+        border-right: 1px solid #808080;
+        float: left;
+        height: 430px;
+        text-align: center;
+        width: 800px;
+    }
+    .content-float-right{
+        border-right: 1px solid #808080;
+        float: right;
+        height: 430px;
+        text-align: center;
+        align-items: center;
+        width: 350px;
+    }
+    .all-link{
+        margin-top: 50%;
+    }
+    .link{
+        font-size: 20px;
+    }
+    .container-footer{
+        display:flex;
+        border: 1px solid #808080;
+        padding: 5px 0 5px 0;
+    }
+</style>
+<body>
+    <div class="container">
+    <form id="form1" runat="server">
+        <div class="container-content">
+            <div class="container-content-title">
+                <div class="title-flex-left">
+                    <div class="title">
+                       <asp:Label ID="lblCaoDang" runat="server" Text="Trường Cao Đẳng"></asp:Label>
+                </div>
+                <div class="title">
+                      <asp:Label ID="lblCongThuong" runat="server" Text="Công Thương Việt Nam"></asp:Label>
+                </div>
+                <div class="title-nho">
+                     <asp:Label ID="lblDaoTao" runat="server" Text="Đào tạo những gì doanh nghiệp cần"></asp:Label>
+                </div>
+                </div>
+                <div class="title-flex-right">
+                       <img src="https://vci.edu.vn/userfiles/images/vendor/logo_congthuong.jpg" align="middle" alt=""/>
+                </div>
+               
+            </div>
+            <div class="clear"></div>
+            <div class="container-content-content">
+                <div class="content-float-left">
+                     <asp:ContentPlaceHolder ID="CTContent" runat="server"></asp:ContentPlaceHolder>
+                </div>
+                <div class="content-float-right">
+                   <div class="all-link">
+                    <div class="link">
+                        <asp:HyperLink ID="hplCapNhat" runat="server" NavigateUrl="~/capnhattruonghoc.aspx" Text="Cập nhật trường học"></asp:HyperLink>
+                    </div>
+                     <div class="link">
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/timkiemtruonghoc.aspx" Text="Tìm kiếm trường học"></asp:HyperLink>
+                    </div>
+                   </div>
+                </div>
+            </div> 
+            <div class="clear"></div>
+            <div class="container-footer">
+                <div class="thongtinsinhvien">
+                    <div class="hoten">
+                        <asp:Label ID="lblHoten" runat="server" Text="Họ và tên: Hạ Quang Vinh"></asp:Label>
+                    </div>
+                    <div class="Dethi">
+                        <asp:Label ID="lblDethi" runat="server" Text="Đề thi số: 02"></asp:Label>
+                    </div>
+                </div>
+                   <div class="thongtinsinhvien">
+                    <div class="hoten">
+                        <asp:Label ID="lblMaSV" runat="server" Text="MSSV: 2104CQ080006"></asp:Label>
+                    </div>
+                    <div class="Dethi">
+                        <asp:Label ID="lblSobaodanh" runat="server" Text="Số báo danh: CCN6B23"></asp:Label>
+                    </div>
+                </div>
+                   <div class="thongtinsinhvien">
+                    <div class="hoten">
+                        <asp:Label ID="lblLop" runat="server" Text="Lớp: CCN04.6B"></asp:Label>
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+    </form>
+    </div>
+</body>
+</html>
+
